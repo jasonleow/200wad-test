@@ -39,7 +39,7 @@
 
   window.onload = async () => {
 
-    const pathname = window.location.pathname.replace(/\/200wad/, '');
+    const pathname = window.location.path.replace(/\/200wad/, '');
 
     const response = await fetch(`https://api.github.com/repos/jasonleow/200wad/contents${pathname}`)
 

@@ -4,7 +4,8 @@ created_at: 2020-02-01T19:58:21.000Z
 published_at: 2020-02-01T21:53:42.000Z
 ---
 
-#{{ page.title }}
+<h1>{{ page.title }}</h1>
+<h3>{{ page.published_at }}</h3>
 
 When we were kids, play came naturally. That's all we did, all day. No agenda. No plans. No purpose. Just play. We didn't need to be told to have fun. Play was all of our waking hours. It was the vehicle in which we engaged with all of life; the lens through which we saw the world we were just born into. Play was a keystone habit we didn't need to inculcate. Play was **everything**. 
 

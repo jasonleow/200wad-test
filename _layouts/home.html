@@ -9,13 +9,14 @@ layout: default
 {{ content }}
 
 <ul>
-  {% for post in site.posts %}
+  {% for article in site.articles %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ article.url }}">{{ article.title }}</a>
     </li>
   {% endfor %}
 </ul>
 
+<!--
 {%- if site.posts.size > 0 -%}
   <ul class="posts">
     <li class="posts-labelgroup" id="posts-labelgroup">
@@ -31,16 +32,16 @@ layout: default
       {% endif %}
     </li>
 
-    {%- for page in site.pages -%}
+    {%- for post in site.posts -%}
       <li>
         {%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y" -%}
-        <a class="post-link" href="{{ page.url | relative_url }}">
-          <h2 class="post-title">{{ page.title | escape }}</h2>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          <h2 class="post-title">{{ post.title | escape }}</h2>
         </a>
         <div class="post-meta">
           <div class="post-date">
             <i class="icon-calendar"></i>
-            {{ page.published_at | date: date_format }}
+            {{ page.date | date: date_format }}
           </div>
         </div>
       </li>
@@ -49,5 +50,5 @@ layout: default
 
   <!-- <p class="feed-subscribe"><svg class="svg-icon orange">
 		<use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-	</svg><a href="{{ "/feed.xml" | relative_url }}">Subscribe</a></p> -->
-{%- endif -%}
+	</svg><a href="{{ "/feed.xml" | relative_url }}">Subscribe</a></p> 
+{%- endif -%} -->

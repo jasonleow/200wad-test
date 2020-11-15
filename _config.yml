@@ -53,8 +53,13 @@ plainwhite:
 #header_pages:
 # - about.md
 
+collections:
+  articles:
+    output: true
+    permalink: /:collection/:path
+    
 # Build settings
-# theme: plainwhite
+# theme: 
 
 plugins:
   - jekyll-seo-tag

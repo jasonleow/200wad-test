@@ -8,6 +8,14 @@ layout: default
 
 {{ content }}
 
+<ul>
+  {% for page in site.posts %}
+    <li>
+      <a href="{{ page.url }}">{{ page.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
 {%- if site.posts.size > 0 -%}
   <ul class="posts">
     <li class="posts-labelgroup" id="posts-labelgroup">

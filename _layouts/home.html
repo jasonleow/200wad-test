@@ -23,7 +23,7 @@ layout: default
       {% endif %}
     </li>
 
-    {%- for post in site.posts -%}
+    {%- for page in site.pages -%}
       <li>
         {%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y" -%}
         <a class="post-link" href="{{ page.url | relative_url }}">
@@ -34,11 +34,6 @@ layout: default
             <i class="icon-calendar"></i>
             {{ page.published_at | date: date_format }}
           </div>
-        </div>
-        <div class="post">
-          {%- if site.show_excerpts -%}
-            {{ page.excerpt }}
-          {%- endif -%}
         </div>
       </li>
     {%- endfor -%}
